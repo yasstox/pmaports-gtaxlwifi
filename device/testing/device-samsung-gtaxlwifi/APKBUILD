@@ -1,21 +1,19 @@
-# Archived: kernel source dead
 
 # Reference: <https://postmarketos.org/devicepkg>
 maintainer=""
 pkgname=device-samsung-gtaxlwifi
 pkgdesc="Samsung Galaxy Tab A 2016 (SM-T580)"
 pkgver=6
-pkgrel=0
+pkgrel=1
 url="https://postmarketos.org"
 license="MIT"
 arch="aarch64"
 options="!check !archcheck"
 depends="
-	linux-samsung-gtaxlwifi
+	linux-postmarketos-exynos7870
 	mkbootimg
 	msm-fb-refresher
 	postmarketos-base
-	postmarketos-base-downstream
 "
 makedepends="devicepkg-dev"
 source="deviceinfo kernel-cmdline.conf"
