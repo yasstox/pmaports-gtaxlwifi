@@ -2,7 +2,7 @@
 maintainer="methanal <kauschluss+methanal@disroot.org>"
 pkgname=linux-postmarketos-exynos7870
 pkgver=6.19.0_rc3
-pkgrel=0
+pkgrel=1
 pkgdesc="Close-to-mainline kernel for Samsung Exynos 7870 devices"
 arch="aarch64"
 _carch="arm64"
@@ -81,5 +81,5 @@ package() {
 sha512sums="
 4a88ece8c95253317103ac277fe8d6cbe6a08d493b8b336bbf6f53bb9312fb38691ec48d3b2593dfd4712ddcf412115db915b098db8637d9e2eeaffc0ce75869  linux-ebf448d250c8d62746f8402832ec2c51e08df6d8.tar.gz
 52ea20defcb9bc1f593e1e4f425ee30390172ddcd4f9e63a50cc6876c4a976684485815f95b7a8c6caa597622c47a35c498db5f1da2264d1e2eb8cfb1ad46ecf  0001-arm64-dts-exynos7870-add-samsung-gtaxlwifi-board.patch
-a20e3c0c0ce40e4f1fc7eec11c9315dca7b7525e0b37cd18d7a85b257a3ce2f599a40f06d5b225161e423f1d6c5022778995aade5f74cd284643cdfb10f9be3c  config-postmarketos-exynos7870.aarch64
+38b12af544859375196a9f332c289662e73eef426d7ecaa3add94762ea886bbf9c1ebb9f2064788fcb8e92a22419c0e75ff5cf6c080941cd6a7e89194ca43808  config-postmarketos-exynos7870.aarch64
 "
