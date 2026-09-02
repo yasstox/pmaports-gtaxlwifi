@@ -1,13 +1,13 @@
 # Kernel config based on defconfig and exynos7870.config
 maintainer="methanal <kauschluss+methanal@disroot.org>"
 pkgname=linux-postmarketos-exynos7870
-pkgver=6.19.0_rc3
-pkgrel=1
+pkgver=7.1.0_rc2
+pkgrel=0
 pkgdesc="Close-to-mainline kernel for Samsung Exynos 7870 devices"
 arch="aarch64"
 _carch="arm64"
 _flavor="postmarketos-exynos7870"
-url="https://gitlab.com/exynos7870-mainline/linux"
+url="https://github.com/yasstox/linux-exynos7870-gtaxlwifi"
 license="GPL-2.0-only"
 options="!strip !check !tracedeps pmb:cross-native"
 makedepends="
@@ -27,19 +27,18 @@ makedepends="
 	zstd
 "
 
-_owner="exynos7870-mainline"
-_repo="linux"
-_commit="ebf448d250c8d62746f8402832ec2c51e08df6d8"
+_owner="yasstox"
+_repo="linux-exynos7870-gtaxlwifi"
+_commit="f6fc5b0eb294678c56ee33b0df142eeb8a046065"
 _config="config-$_flavor.aarch64"
 _kmajver="$(echo "$pkgver" | sed 's/\..*$//')"
 
 # Source
 source="
-        linux-$_commit.tar.gz::https://gitlab.com/$_owner/$_repo/-/archive/$_commit/$_repo-$_commit.tar.gz
-        0001-arm64-dts-exynos7870-add-samsung-gtaxlwifi-board.patch
+        linux-$_commit.tar.gz::https://github.com/$_owner/$_repo/archive/$_commit.tar.gz
         $_config
 "
-builddir="$srcdir/linux-$_commit"
+builddir="$srcdir/$_repo-$_commit"
 
 # pmbootstrap --envkernel exposes the already built Kbuild output as $srcdir.
 if [ -f "$srcdir/Makefile" ] && [ -d "$srcdir/arch" ]; then
@@ -79,7 +78,6 @@ package() {
 }
 
 sha512sums="
-4a88ece8c95253317103ac277fe8d6cbe6a08d493b8b336bbf6f53bb9312fb38691ec48d3b2593dfd4712ddcf412115db915b098db8637d9e2eeaffc0ce75869  linux-ebf448d250c8d62746f8402832ec2c51e08df6d8.tar.gz
-52ea20defcb9bc1f593e1e4f425ee30390172ddcd4f9e63a50cc6876c4a976684485815f95b7a8c6caa597622c47a35c498db5f1da2264d1e2eb8cfb1ad46ecf  0001-arm64-dts-exynos7870-add-samsung-gtaxlwifi-board.patch
-38b12af544859375196a9f332c289662e73eef426d7ecaa3add94762ea886bbf9c1ebb9f2064788fcb8e92a22419c0e75ff5cf6c080941cd6a7e89194ca43808  config-postmarketos-exynos7870.aarch64
+ab1364143ecb42639a04bcd5377e9568ac5597222ff5f2a3d0a816f6b0fe8c8224933e42773f2f7b8066d095390bc76007b017c6ce355ff002fd354a8e41800b  linux-f6fc5b0eb294678c56ee33b0df142eeb8a046065.tar.gz
+16c568c4cf39a78ee9bf401e2a286bec9310f6871aa447cfa094195209d4ec09f3e2d0880a3a3fa9a21b619aa79fd24800cfff1756db941f94d2fe8b8bd7a57e  config-postmarketos-exynos7870.aarch64
 "
