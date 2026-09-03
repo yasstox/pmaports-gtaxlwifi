@@ -2,7 +2,7 @@
 maintainer="methanal <kauschluss+methanal@disroot.org>"
 pkgname=linux-postmarketos-exynos7870
 pkgver=7.1.0_rc2
-pkgrel=0
+pkgrel=1
 pkgdesc="Close-to-mainline kernel for Samsung Exynos 7870 devices"
 arch="aarch64"
 _carch="arm64"
@@ -29,7 +29,7 @@ makedepends="
 
 _owner="yasstox"
 _repo="linux-exynos7870-gtaxlwifi"
-_commit="f6fc5b0eb294678c56ee33b0df142eeb8a046065"
+_commit="c3db703cfeabb3c36c0f36ef71cbeecbc97d0a0c"
 _config="config-$_flavor.aarch64"
 _kmajver="$(echo "$pkgver" | sed 's/\..*$//')"
 
@@ -78,6 +78,6 @@ package() {
 }
 
 sha512sums="
-ab1364143ecb42639a04bcd5377e9568ac5597222ff5f2a3d0a816f6b0fe8c8224933e42773f2f7b8066d095390bc76007b017c6ce355ff002fd354a8e41800b  linux-f6fc5b0eb294678c56ee33b0df142eeb8a046065.tar.gz
-16c568c4cf39a78ee9bf401e2a286bec9310f6871aa447cfa094195209d4ec09f3e2d0880a3a3fa9a21b619aa79fd24800cfff1756db941f94d2fe8b8bd7a57e  config-postmarketos-exynos7870.aarch64
+9802ccb0b3a5ebf8e5250682eb45a3e27081c615b565837a54a3fa60f30e216a3e5b97bd9116b14eae9fb66fb78081cb44eef344e95351ec1e39a5555a7cef43  linux-c3db703cfeabb3c36c0f36ef71cbeecbc97d0a0c.tar.gz
+446d15f6160dc2045fdddca3f41cba0345ef8042948329a21500f8542b6f8e1685dfb1a75911e3c4264c72c63af74aa302c764e4480b21226aa642497d0f462e  config-postmarketos-exynos7870.aarch64
 "
