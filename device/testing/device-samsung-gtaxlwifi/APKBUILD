@@ -4,7 +4,7 @@ maintainer=""
 pkgname=device-samsung-gtaxlwifi
 pkgdesc="Samsung Galaxy Tab A 2016 (SM-T580)"
 pkgver=6
-pkgrel=3
+pkgrel=4
 url="https://postmarketos.org"
 license="MIT"
 arch="aarch64"
@@ -29,6 +29,6 @@ package() {
 }
 
 sha512sums="
-f2a28dc4f41ddee91daf3c8c18cbb3d9df731755155b6f121aa0f06b79892ed5241fae539033327c80b3a28a123a732d517ab2ef8030e87f0bcb6f7385b4c70f  deviceinfo
+6fe3ef0037914cca653d1fc16e8d02d20f012221b7daaef37edac62b8ab387de80c1bae48a879c266ae7d0ab0776d42457c05e752dab7108e6df2c2d423e922b  deviceinfo
 286d590a20720df1ae56f73fa6d1c0f92b3d8218cab99fc502ef41095ff85288726ff9993c9404500e111229e421bb0d2b284621cb4d04ac2930174549d8c7fa  kernel-cmdline.conf
 "
